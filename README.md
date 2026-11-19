@@ -2,6 +2,8 @@
 
 A fast, responsive React app for browsing **Now Playing**, **Popular**, **Top Rated** and **Upcoming** movies, powered by the [TMDB API](https://developer.themoviedb.org/docs).
 
+**🌐 Live demo:** https://cinescope-movies-ten.vercel.app
+
 ## ✨ Features
 
 - **Featured hero** with backdrop art for the top movie in each category
