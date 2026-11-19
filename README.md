@@ -1,31 +1,37 @@
-# 🎬 Simple Movies Website  
+# 🎬 CineScope — Movies Explorer
 
-A sleek, easy-to-use web application that fetches and displays movies using a Movies API. The website allows users to explore **Popular**, **Now Playing**, **Upcoming**, and **Top Rated** movies with real-time data.
+A fast, responsive React app for browsing **Now Playing**, **Popular**, **Top Rated** and **Upcoming** movies, powered by the [TMDB API](https://developer.themoviedb.org/docs).
 
-## 🚀 Features  
-- **Popular Movies**: Displays trending movies loved by audiences.  
-- **Now Playing**: View movies currently playing in theaters.  
-- **Upcoming Movies**: Get a sneak peek at upcoming movie releases.  
-- **Top Rated**: Browse the highest-rated movies of all time.  
+## ✨ Features
 
-## 🛠️ Technologies Used  
-- **HTML5 / CSS3 / JavaScript**  
-- **Movies API** (e.g., [TMDB API](https://www.themoviedb.org/documentation/api))  
-- **Bootstrap**
+- **Featured hero** with backdrop art for the top movie in each category
+- **Search all of TMDB** (debounced) — press <kbd>/</kbd> anywhere to focus search
+- **Rating filter** (Any / 6+ / 7+ / 8+) and **sorting** (rating, newest, title)
+- **Infinite scroll** with skeleton loaders
+- **Movie details modal**: genres, runtime, director, top cast and an embedded **trailer**
+- **Watchlist** saved in your browser
+- **Shareable URLs** (`?view=popular&q=dune&movie=438631`)
+- Fully responsive, keyboard accessible, respects reduced-motion
+- TMDB token is kept **server-side** via a Vercel serverless proxy (`api/tmdb.js`)
 
-## ⚙️ Installation and Setup  
+## 🛠️ Tech
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/your-username/movies-website.git
-   ```
+React 19 · Vite · plain CSS · Vercel Functions
 
-2. **Get an API Key**  
-   - Visit [TMDB API](https://www.themoviedb.org/documentation/api) and create an account.  
+## ⚙️ Local setup
 
-## 🌐 Live Demo  
-You can check the live version of this project [here](https://o-sameh.github.io/Movies) .  
+```bash
+npm install
+echo "TMDB_TOKEN=<your TMDB API Read Access Token>" > .env.local
+npm run dev
+```
 
+Get a token at [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api).
 
+## 🚀 Deploy
 
+Deployed on Vercel. Set the `TMDB_TOKEN` environment variable in the project, then:
 
+```bash
+vercel deploy --prod
+```
